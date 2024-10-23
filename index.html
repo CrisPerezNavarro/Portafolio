@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h1>Hola, soy Cristhofer Perez Navarro</h1>
+    <p>Bachiller en Informatica Empresarial</p>
+  </section>
+
+  <section id="projects">
+    <h2>Proyectos Destacados</h2>
+    <!-- Aquí irán tus proyectos -->
+    <div class="project">
+      <h3>Proyecto 1</h3>
+      <p>Descripción breve del proyecto y los retos superados.</p>
+      <a href="https://github.com/tu-usuario/proyecto1" target="_blank">Ver código</a>
+    </div>
+    <!-- Añade más proyectos aquí -->
+  </section>
+
+  <section id="skills">
+    <h2>Habilidades Técnicas</h2>
+    <ul>
+      <li>HTML, CSS, JavaScript</li>
+      <li>React, Vue</li>
+      <li>Node.js, Express</li>
+      <li>Python, Django</li>
+      <!-- Añade más habilidades -->
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contacto</h2>
+    <p>Si deseas ponerte en contacto, puedes enviarme un correo a <a href="mailto:tuemail@gmail.com">cpereznavarro7@gmail.com</a>.</p>
+  </section>
+
+  <footer>
+    <p>© 2024 Cristhofer PN - Todos los derechos reservados.</p>
+  </footer>
+  <script>
+    window.onscroll = function() {
+      var nav = document.querySelector("nav");
+      if (window.pageYOffset > 100) {
+        nav.style.position = "fixed";
+        nav.style.top = "0";
+        nav.style.width = "100%";
+      } else {
+        nav.style.position = "relative";
+      }
+    };
+  </script>
+</body>
+</html>
+
