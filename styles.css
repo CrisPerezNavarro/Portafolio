@@ -54,13 +54,59 @@ body {
     font-size: 2.5rem;
   }
   
-  #projects .project {
-    background-color: white;
-    margin: 1rem 0;
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+  #projects {
+    text-align: center;
+    padding: 20px;
   }
+  
+  .projects-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .project {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  .project h3 {
+    margin: 0;
+    font-size: 1.2em;
+  }
+  
+  .project p,
+  .project a {
+    display: none;
+  }
+  
+  /* Efecto de hover */
+  .project:hover {
+    width: 300px;
+    height: auto;
+    padding: 16px;
+  }
+  
+  .project:hover p,
+  .project:hover a {
+    display: block;
+  }
+  
+  .project:hover h3 {
+    font-size: 1.4em;
+  }
+  
+  
   
   #skills ul {
     list-style-type: none;
