@@ -1,136 +1,246 @@
 /* Estilos generales */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f4f4f4;
-    color: #333;
-  }
-  
-  /* Navegación */
-  nav {
-    background-color: #333;
-    padding: 1rem;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  nav ul li {
-    display: inline;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  nav ul li a:hover {
-    color: #ddd;
-  }
-  
-  /* Secciones */
-  section {
-    padding: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  
-  #about {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    margin-top: 25px;
-  }
-  
-  #about h1 {
-    font-size: 2.5rem;
-  }
-  
-  
-  #projects {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .projects-container {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .project {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-    width: 200px;
-    height: 50px;
-    text-align: center;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-  }
-  
-  .project h3 {
-    margin: 0;
-    font-size: 1.2em;
-  }
-  
-  .project p,
-  .project a {
-    display: none;
-  }
-  
-  /* Efecto de hover */
-  .project:hover {
-    width: 300px;
-    height: auto;
-    padding: 16px;
-  }
-  
-  .project:hover p,
-  .project:hover a {
-    display: block;
-  }
-  
-  .project:hover h3 {
-    font-size: 1.4em;
-  }
-  
-  
-  
-  #skills ul {
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  #skills ul li {
-    background-color: #333;
-    color: white;
-    margin: 0.5rem;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-  }
-  
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #333;
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  
+  font-family: 'Arial', sans-serif; /* Fuente general */
+  margin: 0; /* Sin margen */
+  padding: 0; /* Sin padding */
+  box-sizing: border-box; /* Modelo de caja */
+  background-color: #f4f4f4; /* Color de fondo de la página */
+  color: #333; /* Color del texto */
+}
+
+/* Navegación */
+nav {
+  background-color: #333; /* Color de fondo de la barra de navegación */
+  padding: 1rem; /* Espaciado interno */
+}
+
+nav ul {
+  list-style-type: none; /* Sin puntos en la lista */
+  margin: 0; /* Sin margen */
+  padding: 0; /* Sin padding */
+  display: flex; /* Disposición en fila */
+  justify-content: space-around; /* Espacio uniforme entre elementos */
+}
+
+nav ul li {
+  display: inline; /* Elementos en línea */
+}
+
+nav ul li a {
+  color: white; /* Color del texto de los enlaces */
+  text-decoration: none; /* Sin subrayado en enlaces */
+  font-weight: bold; /* Texto en negrita */
+}
+
+nav ul li a:hover {
+  color: #ddd; /* Color del texto al pasar el ratón */
+}
+
+/* Secciones */
+section {
+  padding: 2rem; /* Espaciado interno de las secciones */
+  max-width: 1000px; /* Ancho máximo */
+  margin: 0 auto; /* Centrar secciones */
+}
+
+/* Sección "Sobre mí" */
+#about {
+  background-color: #333; /* Color de fondo de la sección "Sobre mí" */
+  color: white; /* Color del texto */
+  text-align: center; /* Centrar texto */
+  margin-top: 25px; /* Margen superior */
+}
+
+#about .about-content {
+  display: flex; /* Disposición en flexbox */
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente */
+  gap: 20px; /* Espacio entre elementos */
+}
+
+.profile-picture {
+  width: 200px; /* Ajusta el tamaño de la imagen */
+  height: 200px; /* Altura de la imagen */
+  border-radius: 50%; /* Hace la imagen circular */
+  object-fit: cover; /* Mantener la proporción de la imagen */
+  border: 3px solid #fff; /* Borde blanco alrededor de la imagen */
+}
+
+/* Ajustes de texto */
+#about h1 {
+  font-size: 2.5rem; /* Tamaño de fuente del título */
+  margin-bottom: 10px; /* Espacio inferior */
+}
+
+#about p {
+  font-size: 1.2rem; /* Tamaño de fuente del párrafo */
+  line-height: 1.5; /* Espaciado entre líneas */
+  margin: 10px 0; /* Margen superior e inferior */
+}
+
+/* Botones y email de "Sobre mí" */
+.about-actions {
+  margin-top: 10px; /* Espacio superior */
+  display: flex; /* Disposición en flexbox */
+  gap: 15px; /* Espacio entre botones */
+  justify-content: center; /* Centrar botones */
+}
+
+.button {
+  background-color: #333; /* Color de fondo de los botones */
+  color: white; /* Color del texto de los botones */
+  padding: 10px 15px; /* Espaciado interno */
+  text-decoration: none; /* Sin subrayado en los botones */
+  border-radius: 5px; /* Bordes redondeados */
+  font-weight: bold; /* Texto en negrita */
+  transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+.button:hover {
+  background-color: #555; /* Color de fondo al pasar el ratón */
+}
+
+.email-button {
+  background-color: #333; /* Color de fondo para el botón de email */
+}
+
+.email-button:hover {
+  background-color: #555; /* Color al pasar el ratón */
+}
+
+/* Icono de LinkedIn */
+.linkedin-icon {
+  color: #0077b5; /* Color del ícono de LinkedIn */
+  font-size: 1.5em; /* Tamaño del ícono */
+  padding: 8px; /* Espaciado interno */
+  border-radius: 50%; /* Bordes redondeados */
+  transition: color 0.3s; /* Transición suave para el color */
+}
+
+.linkedin-icon:hover {
+  color: #005582; /* Color al pasar el ratón */
+}
+
+/* Sección "Proyectos" */
+#projects {
+  text-align: center; /* Centrar texto */
+  padding: 20px; /* Espaciado interno */
+}
+
+.projects-container {
+  display: flex; /* Disposición en flexbox */
+  gap: 20px; /* Espaciado entre proyectos */
+  justify-content: center; /* Centrar proyectos */
+  flex-wrap: wrap; /* Permitir que se envuelvan en múltiples filas */
+}
+
+.project {
+  border: 1px solid #ddd; /* Borde de los proyectos */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno */
+  width: 200px; /* Ancho de cada proyecto */
+  height: 50px; /* Altura de cada proyecto */
+  text-align: center; /* Centrar texto */
+  overflow: hidden; /* Ocultar desbordamiento */
+  transition: all 0.3s ease; /* Transición suave */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  cursor: pointer; /* Cambiar cursor a pointer */
+}
+
+.project h3 {
+  margin: 0; /* Sin margen */
+  font-size: 1.2em; /* Tamaño de fuente del título */
+}
+
+.project p,
+.project a {
+  display: none; /* Ocultar descripción y enlace inicialmente */
+}
+
+/* Efecto de hover en proyectos */
+.project:hover {
+  width: 300px; /* Ampliar al pasar el ratón */
+  height: auto; /* Altura automática */
+  padding: 16px; /* Aumentar espaciado interno */
+}
+
+.project:hover p,
+.project:hover a {
+  display: block; /* Mostrar descripción y enlace al pasar el ratón */
+}
+
+.project:hover h3 {
+  font-size: 1.4em; /* Aumentar tamaño de fuente al pasar el ratón */
+}
+
+/* Sección de habilidades */
+#skills ul {
+  list-style-type: none; /* Sin puntos en la lista */
+  display: flex; /* Disposición en fila */
+  flex-wrap: wrap; /* Permitir que se envuelvan en múltiples filas */
+}
+
+#skills ul li {
+  background-color: #333; /* Color de fondo de los ítems de habilidades */
+  color: white; /* Color del texto de los ítems */
+  margin: 0.5rem; /* Margen entre ítems */
+  padding: 0.5rem 1rem; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.section {
+  text-align: center; /* Centrar texto */
+  margin: 40px 0; /* Espaciado superior e inferior */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  width: 90%; /* Ancho del 90% */
+  max-width: 900px; /* Máximo ancho */
+  margin-left: auto; /* Margen izquierdo automático para centrar */
+  margin-right: auto; /* Margen derecho automático para centrar */
+}
+
+
+/* Footer */
+footer {
+  text-align: center; /* Centrar texto en el footer */
+  padding: 1rem; /* Espaciado interno */
+  background-color: #333; /* Color de fondo del footer */
+  color: white; /* Color del texto en el footer */
+  position: relative; /* Posición relativa */
+  bottom: 0; /* Al final de la página */
+  width: 100%; /* Ancho completo */
+}
+
+.copy-button {
+  background-color: transparent; /* Fondo transparente */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+  position: relative; /* Para posicionar el tooltip */
+  margin-left: 10px; /* Espacio a la izquierda del botón */
+}
+
+.copy-button i {
+  color: #28a745; /* Color del icono */
+  font-size: 1rem; /* Tamaño del icono */
+}
+
+.tooltip {
+  visibility: hidden; /* Oculto por defecto */
+  width: 60px; /* Ancho del tooltip */
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo del tooltip */
+  color: #fff; /* Color del texto */
+  text-align: center; /* Centrar texto */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 5px; /* Espaciado interno */
+  position: absolute; /* Posicionamiento absoluto */
+  bottom: 125%; /* Posicionar arriba del botón */
+  left: 50%; /* Centrar horizontalmente */
+  margin-left: -30px; /* Ajustar margen para centrar */
+  opacity: 0; /* Invisible por defecto */
+  transition: opacity 0.3s; /* Transición de opacidad */
+}
+
+.copy-button:hover .tooltip {
+  visibility: visible; /* Mostrar tooltip al pasar el ratón */
+  opacity: 1; /* Hacer visible */
+}

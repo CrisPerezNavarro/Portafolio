@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mi Portafolio</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
   <header>
@@ -19,9 +22,25 @@
   </header>
 
   <section id="about">
-    <h1>Hola, soy Cristhofer Perez Navarro</h1>
-    <p>Bachiller en Informatica Empresarial</p>
+    <div class="about-content">
+      <img src="fotocv.jpg" alt="Foto de Cristhofer" class="profile-picture">
+      <div class="about-text">
+        <h1>Hola, soy Cristhofer Perez Navarro</h1>
+        <p>Bachiller en Informática Empresarial, con formación en desarrollo de software y tecnologías de la información. 
+          Apasionado por la programación y la creación de soluciones tecnológicas que mejoren la vida diaria.</p>
+        <p></p>
+        <div class="about-actions">
+          <a href="Cristhofer Perez Navarro CV.pdf" target="_blank" class="button">Ver CV</a>
+          <a href="mailto:cpereznavarro7@gmail.com" class="button email-button">Enviar Email</a>
+          <a href="https://www.linkedin.com/in/cristhoferpereznavarro" target="_blank" class="linkedin-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </div>
   </section>
+  
+  
 
   <section id="projects">
     <h2>Proyectos Destacados</h2>
@@ -29,7 +48,7 @@
       <div class="project">
         <h3>Aplicación del Clima</h3>
         <p>En esta aplicación puedes ver cuál es el clima de tu ubicación</p>
-        <p>Uso de API</p>
+        <p>Uso de API de openweathermap, JavaScript, HTML, CSS</p>
         <a href="https://github.com/CrisPerezNavarro/Clima-de-tu-ubicaci-n" target="_blank">Ver código</a>
       </div>
       <div class="project">
@@ -47,21 +66,42 @@
   
   
 
-  <section id="skills">
-    <h2>Habilidades Técnicas</h2>
+  <section id="skills" class="section">
+    <h2>Habilidades</h2>
     <ul>
-      <li>HTML, CSS, JavaScript</li>
-      <li>React, Vue</li>
-      <li>Node.js, Express</li>
-      <li>Python, Django</li>
-      <!-- Añade más habilidades -->
+      <li>Desarrollo web</li>
+      <li>JavaScript</li>
+      <li>HTML/CSS</li>
+      <li>Python</li>
+      <li>Desarrollo de aplicaciones</li>
     </ul>
   </section>
-
-  <section id="contact">
+  
+  <section id="contact" class="section">
     <h2>Contacto</h2>
-    <p>Si deseas ponerte en contacto, puedes enviarme un correo a <a href="mailto:tuemail@gmail.com">cpereznavarro7@gmail.com</a>.</p>
+    <p>
+      Si deseas ponerte en contacto, puedes enviarme un correo a
+      <a href="mailto:tuemail@gmail.com">cpereznavarro7@gmail.com</a>.
+      <button id="copyEmail" class="copy-button">
+        <i class="fas fa-copy"></i>
+        <span class="tooltip">Copiar</span>
+      </button>
+    </p>
   </section>
+
+  
+  <script>
+    document.getElementById('copyEmail').addEventListener('click', function () {
+      const email = 'cpereznavarro7@gmail.com';
+      navigator.clipboard.writeText(email).then(() => {
+        alert('Correo copiado: ' + email);
+      }).catch(err => {
+        console.error('Error al copiar el correo: ', err);
+      });
+    });
+  </script>
+
+
 
   <footer>
     <p>© 2024 Cristhofer PN - Todos los derechos reservados.</p>
