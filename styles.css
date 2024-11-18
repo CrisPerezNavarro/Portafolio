@@ -6,6 +6,7 @@ body {
   box-sizing: border-box; /* Modelo de caja */
   background-color: #f4f4f4; /* Color de fondo de la página */
   color: #333; /* Color del texto */
+
 }
 
 /* Navegación */
@@ -162,6 +163,7 @@ section {
   width: 300px; /* Ampliar al pasar el ratón */
   height: auto; /* Altura automática */
   padding: 16px; /* Aumentar espaciado interno */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .project:hover p,
@@ -243,4 +245,56 @@ footer {
 .copy-button:hover .tooltip {
   visibility: visible; /* Mostrar tooltip al pasar el ratón */
   opacity: 1; /* Hacer visible */
+}
+
+/* Sección "Certificaciones" */
+#certifications {
+  text-align: center; /* Centrar texto */
+  padding: 20px; /* Espaciado interno */
+}
+
+.certifications-container {
+  display: flex; /* Disposición en flexbox */
+  gap: 20px; /* Espaciado entre certificaciones */
+  justify-content: center; /* Centrar certificaciones */
+  flex-wrap: wrap; /* Permitir que se envuelvan en múltiples filas */
+}
+
+.certification {
+  border: 1px solid #ddd; /* Borde de las certificaciones */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno */
+  width: 200px; /* Ancho de cada certificación */
+  height: 50px; /* Altura de cada certificación */
+  text-align: center; /* Centrar texto */
+  overflow: hidden; /* Ocultar desbordamiento */
+  transition: all 0.3s ease; /* Transición suave */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  cursor: pointer; /* Cambiar cursor a pointer */
+}
+
+.certification h3 {
+  margin: 0; /* Sin margen */
+  font-size: 1.2em; /* Tamaño de fuente del título */
+}
+
+.certification p,
+.certification a {
+  display: none; /* Ocultar descripción y enlace inicialmente */
+}
+
+/* Efecto de hover en certificaciones */
+.certification:hover {
+  width: 300px; /* Ampliar al pasar el ratón */
+  height: auto; /* Altura automática */
+  padding: 16px; /* Aumentar espaciado interno */
+}
+
+.certification:hover p,
+.certification:hover a {
+  display: block; /* Mostrar descripción y enlace al pasar el ratón */
+}
+
+.certification:hover h3 {
+  font-size: 1.4em; /* Aumentar tamaño de fuente al pasar el ratón */
 }
