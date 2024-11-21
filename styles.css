@@ -109,19 +109,6 @@ section {
   background-color: #555; /* Color al pasar el ratón */
 }
 
-/* Icono de LinkedIn */
-.linkedin-icon {
-  color: #0077b5; /* Color del ícono de LinkedIn */
-  font-size: 1.5em; /* Tamaño del ícono */
-  padding: 8px; /* Espaciado interno */
-  border-radius: 50%; /* Bordes redondeados */
-  transition: color 0.3s; /* Transición suave para el color */
-}
-
-.linkedin-icon:hover {
-  color: #005582; /* Color al pasar el ratón */
-}
-
 /* Sección "Proyectos" */
 #projects {
   text-align: center; /* Centrar texto */
@@ -213,6 +200,27 @@ footer {
   width: 100%; /* Ancho completo */
 }
 
+footer a {
+  color: white; /* Color de los enlaces, incluyendo íconos */
+  margin: 0 10px; /* Espaciado horizontal entre íconos */
+  font-size: 1.5rem; /* Tamaño de los íconos */
+  transition: color 0.3s ease; /* Transición suave para el color */
+  text-decoration: none; /* Sin subrayado en los enlaces */
+}
+
+footer a:hover {
+  color: #0077b5; /* Cambia a un gris claro al pasar el ratón */
+}
+footer a:nth-child(2):hover {
+  color: #6b076e; /* Cambia a un color negro/gris para GitHub */
+}
+footer a:nth-child(3):hover {
+  color: #de1b09; /* Cambia a un color negro/gris para GitHub */
+}
+
+
+
+
 .copy-button {
   background-color: transparent; /* Fondo transparente */
   border: none; /* Sin borde */
@@ -222,7 +230,7 @@ footer {
 }
 
 .copy-button i {
-  color: #28a745; /* Color del icono */
+  color: #555756; /* Color del icono */
   font-size: 1rem; /* Tamaño del icono */
 }
 
@@ -297,4 +305,25 @@ footer {
 
 .certification:hover h3 {
   font-size: 1.4em; /* Aumentar tamaño de fuente al pasar el ratón */
+}
+
+.social-icons {
+  text-align: center; /* Centra los íconos */
+  margin-top: 10px; /* Espaciado superior */
+}
+
+.social-icons a {
+  color: #fffcfc; /* Color inicial de los íconos */
+  margin: 0 10px; /* Espaciado horizontal entre íconos */
+  font-size: 1rem; /* Tamaño de los íconos, ajustado para que ambos sean del mismo tamaño */
+  transition: color 0.3s ease; /* Animación suave al cambiar color */
+  text-decoration: none; /* Sin subrayado en los enlaces */
+}
+
+.social-icons a:hover {
+  color: #0077b5; /* Cambia a un color destacado (ejemplo: azul de LinkedIn) */
+}
+
+.social-icons a:nth-child(2):hover {
+  color: #6b076e; /* Cambia a un color negro/gris para GitHub */
 }
