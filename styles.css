@@ -44,6 +44,19 @@ section {
   margin: 0 auto; /* Centrar secciones */
 }
 
+@media (max-width: 768px) {
+  section {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 1rem;
+  }
+}
+
+
 /* Sección "Sobre mí" */
 #about {
   background-color: #333; /* Color de fondo de la sección "Sobre mí" */
@@ -58,6 +71,18 @@ section {
   justify-content: center; /* Centrar horizontalmente */
   gap: 20px; /* Espacio entre elementos */
 }
+
+/**/
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Cambiar de fila a columna */
+  }
+  .about-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+/**/
 
 .profile-picture {
   width: 200px; /* Ajusta el tamaño de la imagen */
@@ -95,6 +120,7 @@ section {
   border-radius: 5px; /* Bordes redondeados */
   font-weight: bold; /* Texto en negrita */
   transition: background-color 0.3s; /* Transición suave para el color de fondo */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* sombra para profundidad*/ /**/
 }
 
 .button:hover {
@@ -327,3 +353,44 @@ footer a:nth-child(3):hover {
 .social-icons a:nth-child(2):hover {
   color: #6b076e; /* Cambia a un color negro/gris para GitHub */
 }
+
+
+/* Sección "Educación" */
+#education {
+  text-align: center; /* Centrar texto */
+  padding: 20px; /* Espaciado interno */
+}
+
+.education-container {
+  display: flex; /* Disposición en flexbox */
+  gap: 20px; /* Espaciado entre ítems de educación */
+  justify-content: center; /* Centrar ítems */
+  flex-wrap: wrap; /* Permitir que se envuelvan en múltiples filas */
+}
+
+/* Estilo para ocultar inicialmente "Ver Título" */
+.view-title {
+  display: none; /* Ocultar por defecto */
+  margin-top: 10px; /* Espaciado respecto al contenido del ítem */
+  font-size: 1em; /* Tamaño del texto */
+  color: #007bff; /* Color del texto */
+  text-decoration: underline; /* Subrayar el texto */
+  cursor: pointer; /* Cambiar el cursor al pasar sobre el enlace */
+  transition: all 0.3s ease; /* Transición suave */
+}
+
+/* Mostrar "Ver Título" al pasar el cursor sobre el ítem */
+.education-item:hover .view-title {
+  display: inline-block; /* Mostrar el enlace */
+}
+
+/*"Ver Título" en hover */
+.view-title:hover {
+  color: #0056b3; /* Cambiar el color al pasar el cursor */
+}
+
+
+
+
+
+
