@@ -43,6 +43,7 @@
             <a href="https://github.com/CrisPerezNavarro" target="_blank">
               <i class="fab fa-github"></i>
             </a>
+            <button id="toggle-darkmode">🌙 Modo oscuro</button>
           </div>
         </div>
       </div>
@@ -167,7 +168,7 @@
     <h2>Contacto</h2>
     <p>
       Si deseas ponerte en contacto, puedes enviarme un correo a
-      <a href="mailto:tuemail@gmail.com">cpereznavarro7@gmail.com</a>.
+      <a href="mailto:cpereznavarro7@gmail.com">cpereznavarro7@gmail.com</a>.
       <button id="copyEmail" class="copy-button">
         <i class="fas fa-copy"></i>
         <span class="tooltip">Copiar</span>
@@ -217,6 +218,32 @@
       }
     };
   </script>
+
+  <script>
+  const toggleButton = document.getElementById('toggle-darkmode');
+  toggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+
+    // Guardar preferencia en el almacenamiento local
+    if (document.body.classList.contains('dark-mode')) {
+      localStorage.setItem('theme', 'dark');
+      toggleButton.textContent = '☀️ Modo claro';
+    } else {
+      localStorage.setItem('theme', 'light');
+      toggleButton.textContent = '🌙 Modo oscuro';
+    }
+  });
+
+  // Cargar la preferencia si existe
+  window.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+      toggleButton.textContent = '☀️ Modo claro';
+    }
+  });
+</script>
+
+
 </body>
 
 </html>

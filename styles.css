@@ -389,6 +389,24 @@ footer a:nth-child(3):hover {
   color: #0056b3; /* Cambiar el color al pasar el cursor */
 }
 
+/* Modo claro (por defecto) */
+body {
+  background-color: white;
+  color: black;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+
+
+.dark-mode .section {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
 
 
 
