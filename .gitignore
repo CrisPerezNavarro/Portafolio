@@ -1,9 +1,0 @@
-# No subir la API Key
-.env
-
-# No subir archivos temporales de Python
-__pycache__/
-*.pyc
-
-# Si usas entorno virtual, ignóralo también
-venv/
